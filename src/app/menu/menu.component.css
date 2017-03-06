@@ -13,9 +13,14 @@
 }
 
 ul {
-  font-size: 18px;
-  line-height: 3;
-  font-weight: 400;
-  padding-top: 50px;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 200;
+  padding-top: 10px;
   list-style: none;
+}
+
+ul li a{
+  text-decoration: none;
+  cursor: pointer;
 }

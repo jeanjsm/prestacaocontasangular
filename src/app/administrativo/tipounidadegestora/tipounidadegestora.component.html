@@ -5,7 +5,7 @@
 </div>
 
 
-<div style="width: 60%;">
+<div >
   <app-modal [(visible)]="showDialog">
     <form class="form-group cadastro" >
 
@@ -42,11 +42,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let tug of tipoug; let i = index" (click)="setClicketRow(i);" [class.active]="i == selectedRow">
+      <tr *ngFor="let tug of tipoug | paginate: {itemsPerPage: 5, currentPage:page, id: '1'}; let i = index" (click)="setClicketRow(i);" [class.active]="i == selectedRow">
         <td>{{tug.id}}</td>
         <td>{{tug.descricao}}</td>
         <td>{{tug.ativo}}</td>
       </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="page = $event" id="1"
+                       maxSize="5"
+                       directionLinks="true"
+                       autoHide="true">
+  </pagination-controls>
 </div>

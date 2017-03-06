@@ -1,18 +1,17 @@
 <div class="page">
-	<div class="content">
-    <div class="content-left">
-      <app-menu [@slideInOut]="menuState"></app-menu>
+  <div class="content-left">
+    <app-menu [@slideInOut]="menuState"></app-menu>
+  </div>
+  <div class="content-right" [ngClass]="{'content-right-expanded': menuState === 'out' }" >
+    <div class="header">
+      <button (click)="toggleMenu()" class="hamburger">
+        <span>toggle menu</span>
+      </button>
     </div>
-    <div class="content-right" [@slideInOutContent]="menuState">
-      <div class="header">
-        <button (click)="toggleMenu()" class="hamburger">
-          <span>toggle menu</span>
-        </button>
-      </div>
-      <div [hidden]="false">
-        <app-tipounidadegestora></app-tipounidadegestora>
-      </div>
-      <div class="footer">footer</div>
+    <div [hidden]="false">
+      <app-tipounidadegestora></app-tipounidadegestora>
+
     </div>
+    <div class="footer">footer</div>
   </div>
 </div>
