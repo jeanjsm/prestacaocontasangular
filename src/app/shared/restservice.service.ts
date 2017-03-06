@@ -22,9 +22,9 @@ export class RestService {
 
 function mapObjects(response:Response): any[]{
   let objects = response.json();
-  let tipougs: any[] = [];
+  let any: any[] = [];
   for(var i=0; i<objects.length; i++) {
-    tipougs[i] = objects[i];
+    any[i] = objects[i];
   }
-  return tipougs;
+  return any;
 }
