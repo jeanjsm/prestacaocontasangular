@@ -10,17 +10,17 @@ import {TipougService} from "../../shared/tipoug/tipoug.service";
 })
 export class TipounidadegestoraComponent implements OnInit {
 
-  mostrar: boolean = false;
-  mostrarForm: boolean = false;
-
   tipoug: Tipoug[] = [];
   selectedRow = Number;
+  linhaSelecionada: number;
   setClicketRow : Function;
   tipoUgSelecionado: Tipoug = new Tipoug;
+  showDialog = false;
 
   constructor(private tipougservice : TipougService) {
     this.setClicketRow = function (index) {
       this.selectedRow = index;
+      this.linhaSelecionada = index;
       this.tipoUgSelecionado = this.tipoug[index];
     }
   }
@@ -28,19 +28,30 @@ export class TipounidadegestoraComponent implements OnInit {
   ngOnInit() {
     this.tipougservice.getAll()
       .subscribe(p => this.tipoug = p);
-    this.mostrarForm = false;
+    this.showDialog = false;
   }
 
-  public getMostrarForm() {
-    return this.mostrarForm;
+  novo() {
+    this.tipoUgSelecionado = new Tipoug;
+    this.showDialog = true;
   }
 
-  public btnMostrarForm() {
-    this.mostrarForm = true;
+  cancelar() {
+    this.showDialog = false;
   }
 
-  public btnEsconderForm() {
-    this.mostrarForm = false;
+  editar() {
+    this.setClicketRow = function (index) {
+      this.selectedRow = index;
+      this.linhaSelecionada = index;
+      this.tipoUgSelecionado = this.tipoug[index];
+    }
+    this.showDialog = true;
+    this.tipoUgSelecionado = this.tipoug[this.linhaSelecionada];
+  }
+
+  salvar() {
+    alert('Não implementado ainda...')
   }
 
 }

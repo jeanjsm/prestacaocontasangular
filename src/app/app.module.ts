@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { AdministrativoComponent } from './administrativo/administrativo.component';
 import { TipounidadegestoraComponent } from './administrativo/tipounidadegestora/tipounidadegestora.component';
 import { MenuComponent } from './menu/menu.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdministrativoComponent,
     TipounidadegestoraComponent,
-    MenuComponent
+    MenuComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
