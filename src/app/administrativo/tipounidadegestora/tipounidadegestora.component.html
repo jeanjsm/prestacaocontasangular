@@ -1,0 +1,46 @@
+<div class="btnscontrol">
+  <input type="button" value="Novo" class="btn btn-default" (click)="btnMostrarForm()">
+  <input type="button" value="Editar" class="btn btn-default" (click)="btnMostrarForm()">
+  <input type="button" value="Deletar" class="btn btn-default" (click)="btnMostrarForm()">
+</div>
+<div style="width: 60%;">
+  <form class="form-group cadastro" [hidden]="getMostrarForm()">
+
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="text" class="form-control" id="id" value="{{tipoUgSelecionado.id}}">
+    </div>
+
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <input type="text" class="form-control" id="descricao" required value="{{tipoUgSelecionado.descricao}}">
+    </div>
+
+    <div class="form-group">
+      <label for="ativo">Ativo</label>
+      <input type="checkbox" class="form-control" id="ativo" required value="{{tipoUgSelecionado.ativo}}">
+    </div>
+
+    <input type="button" class="btn btn-primary" value="Salvar">
+    <input type="button" class="btn btn-danger" value="Cancelar" (click)="btnEsconderForm()">
+
+  </form>
+</div>
+<div>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Ativo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tug of tipoug; let i = index" (click)="setClicketRow(i);" [class.active]="i == selectedRow">
+        <td>{{tug.id}}</td>
+        <td>{{tug.descricao}}</td>
+        <td>{{tug.ativo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
