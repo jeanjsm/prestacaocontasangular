@@ -5,25 +5,47 @@ import {HttpModule} from "@angular/http";
 import {AppComponent} from "./app.component";
 import {AdministrativoComponent} from "./administrativo/administrativo.component";
 import {TipounidadegestoraComponent} from "./administrativo/tipounidadegestora/tipounidadegestora.component";
-import {MenuComponent} from "./menu/menu.component";
 import {ModalComponent} from "./shared/components/modal/modal.component";
-import {Ng2PaginationModule} from 'ng2-pagination';
-import { ClienteComponent } from './administrativo/cliente/cliente.component';
+import {Ng2PaginationModule} from "ng2-pagination";
+import {RouterModule} from "@angular/router";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {SplitPaneModule} from "ng2-split-pane/lib/ng2-split-pane";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
     AppComponent,
     AdministrativoComponent,
     TipounidadegestoraComponent,
-    MenuComponent,
     ModalComponent,
-    ClienteComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    Ng2PaginationModule
+    Ng2PaginationModule,
+    SplitPaneModule,
+    NgbModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'administrativo',
+        component: AdministrativoComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: 'tipounidadegestora',
+        component: TipounidadegestoraComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

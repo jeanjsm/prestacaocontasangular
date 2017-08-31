@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
+import {RestService} from "../restservice.service";
+import {Http} from "@angular/http";
 
 @Injectable()
-export class AnexoService {
+export class AnexoService extends RestService{
 
-  constructor() { }
+  constructor(http : Http) {
+    super(http);
+  }
 
 }
