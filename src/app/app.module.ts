@@ -11,6 +11,7 @@ import {RouterModule} from "@angular/router";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {SplitPaneModule} from "ng2-split-pane/lib/ng2-split-pane";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {routes} from "./app.routes";
 
 @NgModule({
   declarations: [
@@ -27,25 +28,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     Ng2PaginationModule,
     SplitPaneModule,
     NgbModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'administrativo',
-        component: AdministrativoComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'tipounidadegestora',
-        component: TipounidadegestoraComponent
-      }
-    ])
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
