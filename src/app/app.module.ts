@@ -14,6 +14,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {routes} from "./app.routes";
 import {AccordionModule} from "ng2-bootstrap";
 import { PortariaComponent } from './administrativo/portaria/portaria.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PortariaComponent } from './administrativo/portaria/portaria.component'
     TipounidadegestoraComponent,
     ModalComponent,
     DashboardComponent,
-    PortariaComponent
+    PortariaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

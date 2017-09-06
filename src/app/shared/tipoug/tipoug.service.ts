@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Headers, Http, Response} from "@angular/http";
-import {Tipoug} from "./tipoug";
-import {Observable} from "rxjs";
-import {RestService} from "../restservice.service";
+import {Headers, Http, Response} from '@angular/http';
+import {Tipoug} from './tipoug';
+import {Observable} from 'rxjs';
+import {RestService} from '../restservice.service';
 
 @Injectable()
 export class TipougService extends RestService {
@@ -12,7 +12,7 @@ export class TipougService extends RestService {
   }
 
   getAll(): Observable<Tipoug[]> {
-    let tipoug$ = this.http.get(`${this.baseUrl}/tipougs/all`, {headers: this.getHeaders()}).map(this.getMapObjects);
+    const tipoug$ = this.http.get(`${this.baseUrl}/tipougs`, {headers: this.getHeaders()}).map(this.getMapObjects);
     return tipoug$;
   }
 
