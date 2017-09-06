@@ -1,9 +1,20 @@
+.card {
+  margin: 5px;
+}
+
 .btnscontrol {
   text-align: right;
+  margin: 10px;
+  padding: 10px;
 }
 
 .cadastro {
   background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.table {
+  width: 100%;
 }
 
 .table tr.active td {

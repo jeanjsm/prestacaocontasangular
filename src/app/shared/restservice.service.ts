@@ -4,7 +4,7 @@ import {Http, Headers, Response} from "@angular/http";
 @Injectable()
 export class RestService {
 
-  public baseUrl: string = 'http://localhost:8080/prestacaocontasservices/api';
+  public baseUrl: string = 'http://localhost:8280/prestacaocontasservices/api';
 
   constructor(public http : Http) { }
 

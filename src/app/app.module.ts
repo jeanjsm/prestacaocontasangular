@@ -12,6 +12,8 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {SplitPaneModule} from "ng2-split-pane/lib/ng2-split-pane";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {routes} from "./app.routes";
+import {AccordionModule} from "ng2-bootstrap";
+import { PortariaComponent } from './administrativo/portaria/portaria.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import {routes} from "./app.routes";
     AdministrativoComponent,
     TipounidadegestoraComponent,
     ModalComponent,
-    DashboardComponent
+    DashboardComponent,
+    PortariaComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import {routes} from "./app.routes";
     Ng2PaginationModule,
     SplitPaneModule,
     NgbModule,
+    AccordionModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

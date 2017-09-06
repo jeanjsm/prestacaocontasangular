@@ -17,4 +17,9 @@ export class AdministrativoComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  public showTipoUnidadeGestora() {
+    this.tipoUnidadeGestora.isShow = true;
+  }
+
 }
