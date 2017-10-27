@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import {Tipoug} from "../../shared/tipoug/tipoug";
-import {TipougService} from "../../shared/tipoug/tipoug.service";
+import {Tipoug} from '../../shared/tipoug/tipoug';
+import {TipougService} from '../../shared/tipoug/tipoug.service';
 
 @Component({
   selector: 'app-tipounidadegestora',
-  template: '../templateForm.html',
   templateUrl: './tipounidadegestora.component.html',
   styleUrls: ['./tipounidadegestora.component.css'],
   providers: [TipougService]
 })
 export class TipounidadegestoraComponent implements OnInit {
 
-  isShow: boolean = false;
+  isShow = false;
 
   tipoug: Tipoug[] = [];
   selectedRow = Number;
   linhaSelecionada: number;
-  setClicketRow : Function;
+  setClicketRow: Function;
   tipoUgSelecionado: Tipoug = new Tipoug;
   showDialog = false;
   isNovo = true;
 
-  constructor(private tipougservice : TipougService) {
+  constructor(private tipougservice: TipougService) {
     this.setClicketRow = function (index) {
       this.selectedRow = index;
       this.linhaSelecionada = index;

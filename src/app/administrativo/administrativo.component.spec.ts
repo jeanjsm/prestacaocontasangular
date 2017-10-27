@@ -4,6 +4,11 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { AdministrativoComponent } from './administrativo.component';
+import {RouterTestingModule} from "@angular/router/testing";
+import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
+import {TranslateModule} from "@ngx-translate/core";
+import {HeaderComponent} from "../shared/components/header/header.component";
+import {SidebarComponent} from "../shared/components/sidebar/sidebar.component";
 
 describe('AdministrativoComponent', () => {
   let component: AdministrativoComponent;
@@ -11,7 +16,16 @@ describe('AdministrativoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdministrativoComponent ]
+      imports: [
+        RouterTestingModule,
+        NgbDropdownModule.forRoot(),
+        TranslateModule.forRoot()
+      ],
+      declarations: [
+        AdministrativoComponent,
+        HeaderComponent,
+        SidebarComponent
+      ]
     })
     .compileComponents();
   }));

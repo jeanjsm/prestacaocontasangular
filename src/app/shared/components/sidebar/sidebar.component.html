@@ -1,0 +1,56 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+  <div class="nested-menu">
+    <a class="list-group-item" (click)="addExpandClass('cadastroGeral')">
+      <span class="fa fa-plus">Cadastro Geral</span>
+    </a>
+    <li class="nested" [class.expand]="showMenu === 'cadastroGeral'">
+      <ul class="submenu">
+        <li>
+          <a routerLink="/administrativo/tipounidadegestora" [routerLinkActive]="['router-link-active']" ><span>Tipo UG</span></a>
+        </li>
+        <li>
+          <a routerLink="/administrativo/portaria" [routerLinkActive]="['router-link-active']" ><span>Portaria</span></a>
+        </li>
+      </ul>
+    </li>
+  </div>
+
+  <div class="nested-menu">
+    <a class="list-group-item" (click)="addExpandClass('cadastroAuxiliar')">
+      <span class="fa fa-plus">Cadastro Auxiliares</span>
+    </a>
+    <li class="nested" [class.expand]="showMenu === 'cadastroAuxiliar'">
+      <ul class="submenu">
+        <li>
+          <a routerLink="/administrativo/tipounidadegestora" [routerLinkActive]="['router-link-active']" ><span>Tipo UG</span></a>
+        </li>
+      </ul>
+    </li>
+  </div>
+
+  <div class="nested-menu">
+    <a class="list-group-item" (click)="addExpandClass('seguranca')">
+      <span class="fa fa-plus">Segurança</span>
+    </a>
+    <li class="nested" [class.expand]="showMenu === 'seguranca'">
+      <ul class="submenu">
+        <li>
+          <a routerLink="/administrativo/tipounidadegestora" [routerLinkActive]="['router-link-active']" ><span>Tipo UG</span></a>
+        </li>
+      </ul>
+    </li>
+  </div>
+
+  <div class="nested-menu">
+    <a class="list-group-item" (click)="addExpandClass('sistema')">
+      <span class="fa fa-plus">Sistema</span>
+    </a>
+    <li class="nested" [class.expand]="showMenu === 'sistema'">
+      <ul class="submenu">
+        <li>
+          <a routerLink="/administrativo/tipounidadegestora" [routerLinkActive]="['router-link-active']" ><span>Tipo UG</span></a>
+        </li>
+      </ul>
+    </li>
+  </div>
+</nav>

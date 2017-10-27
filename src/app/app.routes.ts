@@ -1,8 +1,9 @@
-import {Routes} from "@angular/router";
-import {TipounidadegestoraComponent} from "./administrativo/tipounidadegestora/tipounidadegestora.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {AdministrativoComponent} from "./administrativo/administrativo.component";
-import {PortariaComponent} from "./administrativo/portaria/portaria.component";
+import {Routes} from '@angular/router';
+import {TipounidadegestoraComponent} from './administrativo/tipounidadegestora/tipounidadegestora.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {AdministrativoComponent} from './administrativo/administrativo.component';
+import {PortariaComponent} from './administrativo/portaria/portaria.component';
+import {AdministrativoDashboardComponent} from './administrativo/administrativo-dashboard/administrativo-dashboard.component';
 
 export const routes: Routes = [
   {
@@ -21,6 +22,10 @@ export const routes: Routes = [
       {
         path: 'portaria',
         component: PortariaComponent
+      },
+      {
+        path: 'administrativo-dashboard',
+        component: AdministrativoDashboardComponent
       }
     ]
   },
