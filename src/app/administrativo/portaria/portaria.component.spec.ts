@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PortariaComponent } from './portaria.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import {PortariaModule} from './portaria.module';
 
 describe('PortariaComponent', () => {
   let component: PortariaComponent;
@@ -8,6 +10,10 @@ describe('PortariaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule,
+        PortariaModule
+      ],
       declarations: [ PortariaComponent ]
     })
     .compileComponents();

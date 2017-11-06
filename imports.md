@@ -7,3 +7,11 @@ npm install @angular/common@latest @angular/compiler@latest @angular/compiler-cl
 npm install ng2-accordion
 
 npm i -g npm-check-updates (ncu -a para atualizar o package.json )
+
+Datatables imports
+npm install jquery --save
+npm install datatables.net --save
+npm install datatables.net-dt --save
+npm install angular-datatables --save
+npm install @types/jquery --save-dev
+npm install @types/datatables.net --save-dev

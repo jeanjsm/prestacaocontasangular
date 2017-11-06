@@ -1,1 +1,29 @@
-<ng-template></ng-template>
+<div class="card">
+  <div class="card-header btnscontrol">
+    <input type="button" value="Novo" class="btn btn-outline-primary" (click)="novo()">
+    <input type="button" value="Editar" class="btn btn-outline-secondary" (click)="editar()">
+    <input type="button" value="Deletar" class="btn btn-outline-danger">
+  </div>
+
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Exercicio</th>
+        <th>Data Publicação</th>
+        <th>Número</th>
+        <th>Ativo</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let portaria of portarias">
+      <td>{{portaria.id}}</td>
+      <td>{{portaria.exercicio}}</td>
+      <td>{{portaria.dataPublicacao | date:"dd/MM/yyyy"}}</td>
+      <td>{{portaria.numero}}</td>
+      <td>{{portaria.ativo}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

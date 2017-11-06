@@ -14,8 +14,9 @@ import {NgbAccordionModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {routes} from './app.routes';
 import { PortariaComponent } from './administrativo/portaria/portaria.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
-import {AdministrativoDashboardComponent} from "./administrativo/administrativo-dashboard/administrativo-dashboard.component";
+import {AdministrativoDashboardComponent} from './administrativo/administrativo-dashboard/administrativo-dashboard.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import {DataTablesModule} from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
     SplitPaneModule,
     NgbModule,
     NgbAccordionModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
